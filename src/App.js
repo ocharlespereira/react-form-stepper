@@ -1,8 +1,17 @@
 import React from "react";
 
 import StepRegistration from "./pages/StepRegistration";
+import NewStep from "./pages/NewStep";
 function App() {
-  return <StepRegistration />;
+  const steps = [
+    "Dados paciente",
+    "Convenio",
+    "Endereço",
+    "Contato",
+    "Biometria",
+  ];
+
+  return <NewStep steps={steps} />;
 }
 
 export default App;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, createMuiTheme } from "@material-ui/core/styles";
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
@@ -10,9 +10,20 @@ import Cadastro from "./Cadastro";
 import Endereco from "./Endereco";
 import Telefone from "./Telefone";
 
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#DEA22F",
+    },
+  },
+});
+
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
+  },
+  StepLabel: {
+    background: "red",
   },
   button: {
     marginRight: theme.spacing(1),

@@ -11,7 +11,8 @@
     "react-dom": "^16.14.0",
     "react-form-stepper": "^1.2.10",
     "react-scripts": "3.4.3",
-    "react-stepper-horizontal": "^1.0.11"
+    "react-stepper-horizontal": "^1.0.11",
+    "styled-components": "^5.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
