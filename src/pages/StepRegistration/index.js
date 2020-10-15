@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
+import StepLabel from "@material-ui/core/StepLabel";
 import StepButton from "@material-ui/core/StepButton";
 import Button from "@material-ui/core/Button";
 
@@ -76,14 +77,14 @@ export default function StepRegistration() {
         {steps.map((label, index) => {
           return (
             <Step key={label}>
-              <StepButton
+              <StepLabel
                 onClick={handleStep(index)}
                 // disabled={activeStep > 1}
                 // completed={isStepComplete(index)}
                 // {...buttonProps}
               >
                 {label}
-              </StepButton>
+              </StepLabel>
             </Step>
           );
         })}
