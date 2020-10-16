@@ -30,8 +30,11 @@ export const StepNumber = styled.div`
   margin-bottom: 10px;
 
   font: 15px Amil Typeface;
+
+  background: ${(p) => (p.active ? "#dea22f" : "#D1D3D4")};
   /* background: #dea22f 0% 0% no-repeat padding-box; */
-  /* color: #ffffff; */
+  color: #ffffff;
+  cursor: pointer;
 `;
 
 export const StepDescription = styled.div`
@@ -39,6 +42,7 @@ export const StepDescription = styled.div`
   font: 12px Amil Typeface;
   /* letter-spacing: 0px; */
   color: #7c7c7c;
+  font-weight: ${(p) => (p.active ? "600" : "none")};
   opacity: 1;
 `;
 

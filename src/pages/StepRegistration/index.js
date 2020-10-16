@@ -6,6 +6,8 @@ import StepLabel from "@material-ui/core/StepLabel";
 import StepButton from "@material-ui/core/StepButton";
 import Button from "@material-ui/core/Button";
 
+import NewStep from "../components/NewStep";
+
 import Cadastro from "./Cadastro";
 import Endereco from "./Endereco";
 import Telefone from "./Telefone";
@@ -41,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-  return ["Cadastro", "Endereço", "Telefone"];
+  return ["Dados paciente", "Convenio", "Endereço", "Contato", "Biometria"];
 }
 
 function getStepContent(step) {
@@ -84,7 +86,7 @@ export default function StepRegistration() {
 
   return (
     <div className={classes.root}>
-      <Stepper alternativeLabel nonLinear activeStep={activeStep}>
+      {/* <Stepper alternativeLabel nonLinear activeStep={activeStep}>
         {steps.map((label, index) => {
           return (
             <Step key={label}>
@@ -99,8 +101,8 @@ export default function StepRegistration() {
             </Step>
           );
         })}
-      </Stepper>
-
+      </Stepper> */}
+      <NewStep steps={steps} activeStep={1} />;
       <div>
         <div className={classes.instructions}>{getStepContent(activeStep)}</div>
 
