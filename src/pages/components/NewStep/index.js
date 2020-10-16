@@ -22,7 +22,7 @@ function NewStep({ steps, activeStep }) {
       return stepObj;
     });
 
-    const activeSteps = updateStep(onStep, stepsState);
+    const activeSteps = updateStep(onStep, stepsState); //onStep ou activeStep
 
     setStepsArray(activeSteps);
   }, [activeStep, steps, onStep]); // eslint-disable-line
