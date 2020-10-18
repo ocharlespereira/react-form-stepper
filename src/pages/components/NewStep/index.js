@@ -13,14 +13,13 @@ function NewStep({ steps, activeStep }) {
   const [onStep, setOnStep] = useState(0);
 
   useEffect(() => {
-    const stepsState = steps.map((step, index) => {
-      const stepObj = {};
-      stepObj.description = step;
-      stepObj.completed = false;
-      stepObj.highlighted = index === 0 ? true : false;
-      stepObj.selected = index === 0 ? true : false;
-      return stepObj;
-    });
+    const stepsState = steps.map((step, index) => ({
+      id: index,
+      description: step,
+      completed: false,
+      highlighted: index === 0 ? true : false,
+      selected: index === 0 ? true : false,
+    }));
 
     const activeSteps = updateStep(onStep, stepsState); //onStep ou activeStep
 
@@ -75,7 +74,7 @@ function NewStep({ steps, activeStep }) {
 
   const stepsDisplay = stepsArray.map((step, index) => {
     return (
-      <StepWrapper key={step}>
+      <StepWrapper key={step.id}>
         <StepNumber
           active={step.selected ? true : false}
           onClick={() => {
