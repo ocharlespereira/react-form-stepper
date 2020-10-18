@@ -64,13 +64,9 @@ function NewStep({ steps, activeStep }) {
     return newSteps;
   }, []);
 
-  const handleStep = useCallback(
-    (stepNumber) => {
-      setOnStep(stepNumber);
-      console.log(onStep);
-    },
-    [onStep]
-  );
+  const handleStep = useCallback((stepNumber) => {
+    setOnStep(stepNumber);
+  }, []);
 
   const stepsDisplay = stepsArray.map((step, index) => {
     return (
