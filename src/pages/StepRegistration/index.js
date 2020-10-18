@@ -102,7 +102,7 @@ export default function StepRegistration() {
           );
         })}
       </Stepper> */}
-      <NewStep steps={steps} activeStep={1} />;
+      <NewStep steps={steps} activeStep={1} />
       <div>
         <div className={classes.instructions}>{getStepContent(activeStep)}</div>
 
